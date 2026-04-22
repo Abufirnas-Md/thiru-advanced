@@ -490,8 +490,8 @@ html, body {
       <div class="title-main" style="font-size:clamp(15px,3vw,18px);margin-bottom:3px;">உங்கள் வட்டாரம் தேர்ந்தெடுக்கவும்</div>
       <div style="font-size:11px;color:rgba(212,160,23,0.6);letter-spacing:1px;margin-bottom:12px;">SELECT YOUR DIALECT REGION</div>
       <div class="slang-grid">
-        <button class="slang-btn" onclick="selectDialect('chennai','மெட்ராஸ் பாஷை','Madras Bashai')" id="d-chennai">
-          <span class="region">🌊</span>சென்னை<br><small>Madras Bashai</small>
+        <button class="slang-btn" onclick="selectDialect('madras','மெட்ராஸ் பாஷை','Madras Tamil')" id="d-chennai">
+          <span class="region">🌊</span>சென்னை<br><small>Madras Tamili</small>
         </button>
         <button class="slang-btn" onclick="selectDialect('coimbatore','கோவை தமிழ்','Coimbatore Tamil')" id="d-coimbatore">
           <span class="region">🏭</span>கோவை<br><small>Kovai Tamil</small>
@@ -762,6 +762,85 @@ const MEANING_MAP = [
   { p:['mokke','மொக்கை'], a:[], std:'பொருள் இல்லாதது', eng:'Useless / boring', c:90 },
   { p:['sappa','சப்பை'], a:[], std:'சுவையற்றது', eng:'Boring / dull', c:89 },
   { p:['over'], a:['panra','பண்ற'], std:'அதிகமாக செய்கிறாய்', eng:'Overdoing it!', c:90 },
+  
+// TIRUNELVELI / SOUTH TN AUTHENTIC SLANG MAP
+
+const TIRUNELVELI_MAP = [
+
+  // CORE WORDS YOU GAVE (ENHANCED)
+  { p:['paiyya','payya','பைய'], a:[], std:'மெதுவாக', eng:'Slowly / Gently', c:96 },
+  { p:['soli','சோலி'], a:[], std:'வேலை', eng:'Work / Job', c:95 },
+  { p:['thorava','தொரவா'], a:[], std:'சாவி', eng:'Key', c:95 },
+  { p:['makka','mokkaa','mokkaan','மக்கா'], a:[], std:'நண்பா', eng:'Bro / Dude', c:96 },
+  { p:['machaan','atthaan','மச்சான்'], a:[], std:'உறவினர்', eng:'Cousin / Brother-in-law', c:95 },
+  { p:['anney','அண்ணே'], a:[], std:'அண்ணா', eng:'Elder brother!', c:97 },
+  { p:['maini','anni','மைனி','அண்ணி'], a:[], std:'அண்ணி', eng:'Sister-in-law', c:95 },
+  { p:['kottikaren','கொட்டிக்காரன்'], a:[], std:'முட்டாள்', eng:'Foolish person', c:94 },
+  { p:['oru ettu','ஒரு எட்டு'], a:[], std:'ஒரு முறை', eng:'Just once / Quickly', c:94 },
+  { p:['thanni','தண்ணி'], a:[], std:'தண்ணீர்', eng:'Water / Bath', c:98 },
+  { p:['pottaatta','பொட்டாத்த'], a:[], std:'அமைதியாக', eng:'Calmly / Quietly', c:93 },
+  { p:['veykka','வெக்க'], a:[], std:'வெயில்', eng:'Heat / Humid', c:94 },
+  { p:['porathala','பொறத்தால'], a:[], std:'பின்னால்', eng:'Later / Behind', c:94 },
+
+  // YOUR PHRASES
+  { p:['paiyya poitu vaa'], a:[], std:'மெதுவாக போய் வா', eng:'Go slowly and come', c:97 },
+  { p:['appadi podu'], a:[], std:'அப்படித்தான் செய்', eng:'That’s it!', c:96 },
+  { p:['enna makkaley'], a:[], std:'எப்படி இருக்கீங்க நண்பர்களே?', eng:'What’s up guys!', c:97 },
+  { p:['seruppu thottuttu vaanga'], a:[], std:'செருப்பு அணிந்து வா', eng:'Wear slippers and come', c:95 },
+  { p:['thala seevu'], a:[], std:'முடியை சீவு', eng:'Comb your hair', c:95 },
+  { p:['adichan gosu'], a:[], std:'அதிர்ச்சி பதில்', eng:'Quick comeback!', c:93 },
+
+  // EXTENDED AUTHENTIC VARIANTS
+  { p:['enna le makka'], a:[], std:'என்ன நண்பா?', eng:'What bro?', c:96 },
+  { p:['saptiya makka'], a:[], std:'சாப்பிட்டாயா?', eng:'Had food bro?', c:96 },
+  { p:['enga pora makka'], a:[], std:'எங்கே போகிறாய்?', eng:'Where going bro?', c:96 },
+  { p:['paiyya vaa'], a:[], std:'மெதுவாக வா', eng:'Come slowly', c:95 },
+  { p:['paiyya po'], a:[], std:'மெதுவாக போ', eng:'Go slowly', c:95 },
+
+  // COMMAND STYLE
+  { p:['vaa makka'], a:[], std:'வா நண்பா', eng:'Come bro', c:95 },
+  { p:['po makka'], a:[], std:'போ நண்பா', eng:'Go bro', c:95 },
+  { p:['ukkaru makka'], a:[], std:'உட்கார்', eng:'Sit bro', c:94 },
+  { p:['kelu makka'], a:[], std:'கேள்', eng:'Listen bro', c:94 },
+  { p:['paaru makka'], a:[], std:'பார்', eng:'Look bro', c:94 },
+
+  // DAILY LIFE
+  { p:['thanni kudichiya'], a:[], std:'தண்ணீர் குடித்தாயா?', eng:'Did you drink water?', c:95 },
+  { p:['kulichiya'], a:[], std:'குளித்தாயா?', eng:'Did you bathe?', c:95 },
+  { p:['sapadu ready'], a:[], std:'சாப்பாடு தயார்', eng:'Food ready', c:96 },
+  { p:['thoongita'], a:[], std:'தூங்கிவிட்டான்', eng:'He slept', c:94 },
+
+  // FEELINGS
+  { p:['sandhosham makka'], a:[], std:'சந்தோஷம்', eng:'Happy bro', c:95 },
+  { p:['kovama irukka'], a:[], std:'கோபமாக இருக்கிறாயா?', eng:'Are you angry?', c:95 },
+  { p:['bayama irukku'], a:[], std:'பயமாக உள்ளது', eng:'Feeling scared', c:95 },
+
+  // NEGATIVE / FUNNY
+  { p:['kotti payya'], a:[], std:'முட்டாள் பையன்', eng:'Silly boy', c:94 },
+  { p:['loosu makka'], a:[], std:'சில்லறை நண்பா', eng:'Crazy bro', c:94 },
+  { p:['over pannadha makka'], a:[], std:'அதிகப்படுத்தாதே', eng:'Don’t overdo bro', c:94 },
+  { p:['summa iru makka'], a:[], std:'அமைதியாக இரு', eng:'Stay calm bro', c:94 },
+
+  // LOCATION / TIME
+  { p:['ippo varren makka'], a:[], std:'இப்போது வருகிறேன்', eng:'Coming now', c:95 },
+  { p:['apram paakalam'], a:[], std:'பிறகு பார்ப்போம்', eng:'See later', c:95 },
+  { p:['inga vaa makka'], a:[], std:'இங்கே வா', eng:'Come here bro', c:95 },
+  { p:['anga po makka'], a:[], std:'அங்கே போ', eng:'Go there bro', c:95 },
+
+  // EXTRA NATURAL FILL (to push dataset size)
+  { p:['seri makka'], a:[], std:'சரி நண்பா', eng:'Okay bro', c:96 },
+  { p:['aama makka'], a:[], std:'ஆம் நண்பா', eng:'Yes bro', c:96 },
+  { p:['illa makka'], a:[], std:'இல்லை நண்பா', eng:'No bro', c:96 },
+  { p:['correct makka'], a:[], std:'சரியானது', eng:'Correct bro', c:95 },
+  { p:['nalla irukka'], a:[], std:'நல்லா இருக்கிறதா?', eng:'Is it good?', c:95 },
+
+  // MORE DIALECT FEEL
+  { p:['dei makka'], a:[], std:'ஏய் நண்பா', eng:'Hey bro!', c:93 },
+  { p:['adiye makka'], a:[], std:'ஏய் (பெண்)', eng:'Hey girl!', c:93 },
+  { p:['seekiram vaa makka'], a:[], std:'விரைவாக வா', eng:'Come fast bro', c:94 },
+  { p:['late aaguthu makka'], a:[], std:'தாமதமாகிறது', eng:'Getting late bro', c:94 }
+
+];
   // PEOPLE
   { p:['macha','machan','மாச்சான்'], a:[], std:'நண்பனே!', eng:'Buddy! Dear friend!', c:92 },
   { p:['maama','மாமா'], a:[], std:'நண்பனே!', eng:'Dude! Bro!', c:91 },
