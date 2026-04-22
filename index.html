@@ -742,12 +742,10 @@ const DIALECT_DATA = {
 
 // ── MEANING MAP (expanded) ──
 const MEANING_MAP = [
-  // LIGHT / FAN
   { p:['light','விளக்கு'], a:['on','போடு','podu','switch on','켜','ஏற்று'], std:'விளக்கை ஏற்றுங்கள்', eng:'Turn on the light', c:95 },
   { p:['light','விளக்கு'], a:['off','அணை','switch off','anai'], std:'விளக்கை அணையுங்கள்', eng:'Turn off the light', c:95 },
   { p:['fan','விசிறி'], a:['on','போடு','podu'], std:'விசிறியை இயக்குங்கள்', eng:'Turn on the fan', c:93 },
   { p:['fan','விசிறி'], a:['off','அணை'], std:'விசிறியை நிறுத்துங்கள்', eng:'Turn off the fan', c:93 },
-  // POSITIVE EXPRESSIONS
   { p:['semma','vera level','mass'], a:[], std:'மிகவும் அருமை!', eng:'Awesome! Excellent!', c:98 },
   { p:['super','சூப்பர்'], a:[], std:'மிகவும் நல்லது!', eng:'Super! Great!', c:99 },
   { p:['kalakkal','கலக்கல்'], a:[], std:'மிகவும் சிறந்தது!', eng:'Rocking! Outstanding!', c:97 },
@@ -756,18 +754,11 @@ const MEANING_MAP = [
   { p:['pakka','பக்கா'], a:[], std:'உண்மையான / தரமான', eng:'Genuine / Quality / Perfect', c:93 },
   { p:['massu','mass'], a:[], std:'பிரபலமான / அட்டகாசமான', eng:'Mass style / Grand!', c:92 },
   { p:['vera','வேற'], a:[], std:'வேறுபட்ட நிலை', eng:'Another level / Different!', c:90 },
-  // NEGATIVE / REACTIONS
   { p:['poda','போடா','podi','போடி'], a:[], std:'போ அங்கே!', eng:'Get lost! (mild slang)', c:88 },
   { p:['loosu','lusu','லூசு'], a:[], std:'சில்லறை மனிதர்', eng:'Silly / crazy person (teasing)', c:90 },
   { p:['mokke','மொக்கை'], a:[], std:'பொருள் இல்லாதது', eng:'Useless / boring', c:90 },
   { p:['sappa','சப்பை'], a:[], std:'சுவையற்றது', eng:'Boring / dull', c:89 },
   { p:['over'], a:['panra','பண்ற'], std:'அதிகமாக செய்கிறாய்', eng:'Overdoing it!', c:90 },
-  
-// TIRUNELVELI / SOUTH TN AUTHENTIC SLANG MAP
-
-const TIRUNELVELI_MAP = [
-
-  // CORE WORDS YOU GAVE (ENHANCED)
   { p:['paiyya','payya','பைய'], a:[], std:'மெதுவாக', eng:'Slowly / Gently', c:96 },
   { p:['soli','சோலி'], a:[], std:'வேலை', eng:'Work / Job', c:95 },
   { p:['thorava','தொரவா'], a:[], std:'சாவி', eng:'Key', c:95 },
@@ -781,8 +772,6 @@ const TIRUNELVELI_MAP = [
   { p:['pottaatta','பொட்டாத்த'], a:[], std:'அமைதியாக', eng:'Calmly / Quietly', c:93 },
   { p:['veykka','வெக்க'], a:[], std:'வெயில்', eng:'Heat / Humid', c:94 },
   { p:['porathala','பொறத்தால'], a:[], std:'பின்னால்', eng:'Later / Behind', c:94 },
-
-  // YOUR PHRASES
   { p:['paiyya poitu vaa'], a:[], std:'மெதுவாக போய் வா', eng:'Go slowly and come', c:97 },
   { p:['appadi podu'], a:[], std:'அப்படித்தான் செய்', eng:'That’s it!', c:96 },
   { p:['enna makkaley'], a:[], std:'எப்படி இருக்கீங்க நண்பர்களே?', eng:'What’s up guys!', c:97 },
@@ -802,99 +791,67 @@ const TIRUNELVELI_MAP = [
   { p:['pottaatta','பொட்டாத்த'], a:[], std:'அமைதியாக', eng:'Calmly / Quietly', c:93 },
   { p:['veykka','வெக்க'], a:[], std:'வெயில்', eng:'Heat / Humid', c:94 },
   { p:['porathala','பொறத்தால'], a:[], std:'பின்னால்', eng:'Later / Behind', c:94 },
-
-  // PHRASES
   { p:['paiyya poitu vaa','பைய போயிட்டு வா'], a:[], std:'மெதுவாக போய் வா', eng:'Go slowly and come', c:97 },
   { p:['appadi podu','அப்படிப் போடு'], a:[], std:'அப்படித்தான் செய்', eng:'That’s it!', c:96 },
   { p:['enna makkaley','என்ன மக்களே'], a:[], std:'எப்படி இருக்கீங்க நண்பர்களே?', eng:'What’s up guys!', c:97 },
   { p:['seruppu thottuttu vaanga','செருப்பு தொட்டுட்டு வாங்க'], a:[], std:'செருப்பு அணிந்து வா', eng:'Wear slippers and come', c:95 },
   { p:['thala seevu','தலை சீவு'], a:[], std:'முடியை சீவு', eng:'Comb your hair', c:95 },
   { p:['adichan gosu','அடிச்சான் கோசு'], a:[], std:'அதிர்ச்சி பதில்', eng:'Quick comeback!', c:93 },
-
-  // DAILY TALK
   { p:['enna makka','என்ன மக்கா'], a:[], std:'என்ன நண்பா?', eng:'What bro?', c:96 },
   { p:['saptiya makka','சாப்பிட்டியா மக்கா'], a:[], std:'சாப்பிட்டாயா?', eng:'Had food bro?', c:96 },
   { p:['enga pora makka','எங்க போற மக்கா'], a:[], std:'எங்கே போகிறாய்?', eng:'Where going bro?', c:96 },
-
-  // COMMANDS
   { p:['vaa makka','வா மக்கா'], a:[], std:'வா நண்பா', eng:'Come bro', c:95 },
   { p:['po makka','போ மக்கா'], a:[], std:'போ நண்பா', eng:'Go bro', c:95 },
   { p:['ukkaru makka','உக்காரு மக்கா'], a:[], std:'உட்கார்', eng:'Sit bro', c:94 },
   { p:['kelu makka','கேள் மக்கா'], a:[], std:'கேள்', eng:'Listen bro', c:94 },
   { p:['paaru makka','பாரு மக்கா'], a:[], std:'பார்', eng:'Look bro', c:94 },
-
-  // FEELINGS
   { p:['sandhosham makka','சந்தோஷம் மக்கா'], a:[], std:'சந்தோஷம்', eng:'Happy bro', c:95 },
   { p:['kovama irukka','கோபமா இருக்கா'], a:[], std:'கோபமாக இருக்கிறாயா?', eng:'Are you angry?', c:95 },
   { p:['bayama irukku','பயமா இருக்கு'], a:[], std:'பயம்', eng:'Feeling scared', c:95 },
-
-  // NEGATIVE
   { p:['loosu makka','லூசு மக்கா'], a:[], std:'சில்லறை நண்பா', eng:'Crazy bro', c:94 },
   { p:['over pannadha makka','ஓவர் பண்ணாத மக்கா'], a:[], std:'அதிகப்படுத்தாதே', eng:'Don’t overdo bro', c:94 },
   { p:['summa iru makka','சும்மா இரு மக்கா'], a:[], std:'அமைதியாக இரு', eng:'Stay calm bro', c:94 },
-
-  // TIME / LOCATION
   { p:['ippo varren makka','இப்போ வரேன் மக்கா'], a:[], std:'இப்போது வருகிறேன்', eng:'Coming now', c:95 },
   { p:['apram paakalam','அப்புறம் பார்க்கலாம்'], a:[], std:'பிறகு பார்ப்போம்', eng:'See later', c:95 },
   { p:['inga vaa makka','இங்க வா மக்கா'], a:[], std:'இங்கே வா', eng:'Come here bro', c:95 },
   { p:['anga po makka','அங்க போ மக்கா'], a:[], std:'அங்கே போ', eng:'Go there bro', c:95 },
-
-  // AGREEMENT
   { p:['seri makka','சரி மக்கா'], a:[], std:'சரி நண்பா', eng:'Okay bro', c:96 },
   { p:['aama makka','ஆமா மக்கா'], a:[], std:'ஆம்', eng:'Yes bro', c:96 },
   { p:['illa makka','இல்ல மக்கா'], a:[], std:'இல்லை', eng:'No bro', c:96 },
-
-  // EXTRA NATURAL
   { p:['dei makka','டேய் மக்கா'], a:[], std:'ஏய் நண்பா', eng:'Hey bro!', c:93 },
   { p:['adiye makka','அடியே மக்கா'], a:[], std:'ஏய் (பெண்)', eng:'Hey girl!', c:93 },
   { p:['seekiram vaa makka','சீக்கிரம் வா மக்கா'], a:[], std:'விரைவாக வா', eng:'Come fast bro', c:94 },
   { p:['late aaguthu makka','லேட் ஆகுது மக்கா'], a:[], std:'தாமதமாகிறது', eng:'Getting late bro', c:94 }
-
-  // EXTENDED AUTHENTIC VARIANTS
   { p:['enna le makka'], a:[], std:'என்ன நண்பா?', eng:'What bro?', c:96 },
   { p:['saptiya makka'], a:[], std:'சாப்பிட்டாயா?', eng:'Had food bro?', c:96 },
   { p:['enga pora makka'], a:[], std:'எங்கே போகிறாய்?', eng:'Where going bro?', c:96 },
   { p:['paiyya vaa'], a:[], std:'மெதுவாக வா', eng:'Come slowly', c:95 },
   { p:['paiyya po'], a:[], std:'மெதுவாக போ', eng:'Go slowly', c:95 },
-
-  // COMMAND STYLE
   { p:['vaa makka'], a:[], std:'வா நண்பா', eng:'Come bro', c:95 },
   { p:['po makka'], a:[], std:'போ நண்பா', eng:'Go bro', c:95 },
   { p:['ukkaru makka'], a:[], std:'உட்கார்', eng:'Sit bro', c:94 },
   { p:['kelu makka'], a:[], std:'கேள்', eng:'Listen bro', c:94 },
   { p:['paaru makka'], a:[], std:'பார்', eng:'Look bro', c:94 },
-
-  // DAILY LIFE
   { p:['thanni kudichiya'], a:[], std:'தண்ணீர் குடித்தாயா?', eng:'Did you drink water?', c:95 },
   { p:['kulichiya'], a:[], std:'குளித்தாயா?', eng:'Did you bath?', c:95 },
   { p:['sapadu ready'], a:[], std:'சாப்பாடு தயார்', eng:'Food is ready', c:96 },
   { p:['thoongita'], a:[], std:'தூங்கிவிட்டான்', eng:'He slept', c:94 },
-
-  // FEELINGS
   { p:['sandhosham makka'], a:[], std:'சந்தோஷம்', eng:'Happy bro', c:95 },
   { p:['kovama irukka'], a:[], std:'கோபமாக இருக்கிறாயா?', eng:'Are you angry?', c:95 },
   { p:['bayama irukku'], a:[], std:'பயமாக உள்ளது', eng:'Feeling scared', c:95 },
-
-  // NEGATIVE / FUNNY
   { p:['kotti payya'], a:[], std:'முட்டாள் பையன்', eng:'Silly boy', c:94 },
   { p:['loosu makka'], a:[], std:'சில்லறை நண்பா', eng:'Crazy bro', c:94 },
   { p:['over pannadha makka'], a:[], std:'அதிகப்படுத்தாதே', eng:'Don’t overdo bro', c:94 },
   { p:['summa iru makka'], a:[], std:'அமைதியாக இரு', eng:'Stay calm bro', c:94 },
-
-  // LOCATION / TIME
   { p:['ippo varren makka'], a:[], std:'இப்போது வருகிறேன்', eng:'Coming now', c:95 },
   { p:['apram paakalam'], a:[], std:'பிறகு பார்ப்போம்', eng:'See later', c:95 },
   { p:['inga vaa makka'], a:[], std:'இங்கே வா', eng:'Come here bro', c:95 },
   { p:['anga po makka'], a:[], std:'அங்கே போ', eng:'Go there bro', c:95 },
-
-  // EXTRA NATURAL FILL (to push dataset size)
   { p:['seri makka'], a:[], std:'சரி நண்பா', eng:'Okay bro', c:96 },
   { p:['aama makka'], a:[], std:'ஆம் நண்பா', eng:'Yes bro', c:96 },
   { p:['illa makka'], a:[], std:'இல்லை நண்பா', eng:'No bro', c:96 },
   { p:['correct makka'], a:[], std:'சரியானது', eng:'Correct bro', c:95 },
   { p:['nalla irukka'], a:[], std:'நல்லா இருக்கிறதா?', eng:'Is it good?', c:95 },
-
-  // MORE DIALECT FEEL
   { p:['dei makka'], a:[], std:'ஏய் நண்பா', eng:'Hey bro!', c:93 },
   { p:['adiye makka'], a:[], std:'ஏய் (பெண்)', eng:'Hey girl!', c:93 },
   { p:['seekiram vaa makka'], a:[], std:'விரைவாக வா', eng:'Come fast bro', c:94 },
@@ -908,7 +865,6 @@ const TIRUNELVELI_MAP = [
   { p:['nadakku','நடக்கு'], a:[], std:'நட', eng:'Walk!', c:94 },
   { p:['iru','இரு'], a:[], std:'இரு', eng:'Stay / Wait', c:94 },
   { p:['vidu','விடு'], a:[], std:'விடு', eng:'Leave it / Let go', c:94 },
-  // FEELINGS
   { p:['pidichirukku','பிடிச்சிருக்கு'], a:[], std:'பிடித்துள்ளது', eng:'I like it!', c:94 },
   { p:['pidikala','பிடிக்கல'], a:[], std:'பிடிக்கவில்லை', eng:"I don't like it", c:94 },
   { p:['bayama','பயமா'], a:[], std:'பயமாக இருக்கிறது', eng:'Feeling scared / afraid', c:94 },
@@ -916,7 +872,6 @@ const TIRUNELVELI_MAP = [
   { p:['sandhosham','சந்தோஷம்'], a:[], std:'சந்தோஷம்', eng:'Happy!', c:94 },
   { p:['kashtam','கஷ்டம்'], a:[], std:'கஷ்டம்', eng:'Difficult / Tough', c:94 },
   { p:['veri','வெறி'], a:[], std:'மிகுந்த உற்சாகம்!', eng:'Mad energy / Intense!', c:94 },
-  // LOCATION / TIME
   { p:['inga','இங்க'], a:[], std:'இங்கே', eng:'Here', c:95 },
   { p:['anga','அங்க'], a:[], std:'அங்கே', eng:'There', c:95 },
   { p:['veetuku','வீட்டுக்கு'], a:['po','போ'], std:'வீட்டிற்கு போ', eng:'Go home!', c:92 },
@@ -925,7 +880,6 @@ const TIRUNELVELI_MAP = [
   { p:['munadi','முனாடி'], a:[], std:'முன்பு', eng:'Before / Earlier', c:94 },
   { p:['ulley','உள்ளே'], a:[], std:'உள்ளே', eng:'Inside', c:94 },
   { p:['veliye','வெளியே'], a:[], std:'வெளியே', eng:'Outside', c:94 },
-  // FILLERS / MISC
   { p:['summa','சும்மா'], a:[], std:'வெறுமனே', eng:'Just casually / For no reason', c:93 },
   { p:['scene'], a:[], std:'நிலைமை / சூழல்', eng:'Situation / Scene', c:90 },
   { p:['dei','டேய்'], a:[], std:'ஏய்!', eng:'Hey! (to male)', c:88 },
@@ -935,7 +889,6 @@ const TIRUNELVELI_MAP = [
   { p:['pannaadha','பண்ணாத'], a:[], std:'செய்யாதே!', eng:"Don't do it!", c:88 },
   { p:['level'], a:[], std:'நிலை', eng:'Level / Standard', c:85 },
   { p:['correct'], a:[], std:'சரியானது', eng:'Correct / Right', c:96 },
-  // PEOPLE
   { p:['macha','machan','மாச்சான்'], a:[], std:'நண்பனே!', eng:'Buddy! Dear friend!', c:92 },
   { p:['maama','மாமா'], a:[], std:'நண்பனே!', eng:'Dude! Bro!', c:91 },
   { p:['thambi','தம்பி'], a:[], std:'இளைய சகோதரன்', eng:'Younger brother', c:95 },
@@ -944,7 +897,6 @@ const TIRUNELVELI_MAP = [
   { p:['bro'], a:[], std:'சகோதரன்', eng:'Bro!', c:90 },
   { p:['amma','அம்மா'], a:[], std:'அன்னையே!', eng:'Mother / Oh my!', c:99 },
   { p:['thala','தலை'], a:[], std:'தலைவர்!', eng:'Leader / Boss!', c:93 },
-  // COMMANDS
   { p:['vaa','வா'], a:[], std:'வாருங்கள்!', eng:'Come here!', c:91 },
   { p:['po','போ'], a:[], std:'போகுங்கள்!', eng:'Go away!', c:90 },
   { p:['ukkaru'], a:[], std:'உட்காருங்கள்', eng:'Sit down', c:90 },
@@ -953,23 +905,19 @@ const TIRUNELVELI_MAP = [
   { p:['sollu','சொல்லு'], a:[], std:'சொல்லுங்கள்', eng:'Tell / Say!', c:90 },
   { p:['paaru','பாரு','paa','பா'], a:[], std:'பாருங்கள்!', eng:'Look / See this!', c:91 },
   { p:['pannu','பண்ணு'], a:[], std:'செய்யுங்கள்', eng:'Do it!', c:90 },
-  // QUESTIONS
   { p:['enna','என்ன'], a:['panra','பண்ற','pannu'], std:'நீ என்ன செய்கிறாய்?', eng:'What are you doing?', c:89 },
   { p:['saptiya','சாப்பிட்டியா'], a:[], std:'சாப்பிட்டாயா?', eng:'Did you eat?', c:94 },
   { p:['enga','எங்க'], a:[], std:'எங்கே?', eng:'Where?', c:95 },
   { p:['evlo','எவ்வளவு'], a:[], std:'எவ்வளவு?', eng:'How much?', c:95 },
   { p:['epdi','எப்படி'], a:[], std:'எப்படி?', eng:'How?', c:95 },
   { p:['theriyuma','தெரியுமா'], a:[], std:'உங்களுக்கு தெரியுமா?', eng:'Do you know?', c:91 },
-  // AGREEMENT
   { p:['seri','சரி'], a:[], std:'சரி, ஒப்புக்கொள்கிறேன்', eng:'Okay / Alright / Agreed', c:97 },
   { p:['aama','ஆமா'], a:[], std:'ஆம், சரிதான்', eng:'Yes / That is right', c:98 },
   { p:['illa','இல்ல'], a:[], std:'இல்லை', eng:'No / Not there', c:98 },
-  // QUALITY / DEGREE
   { p:['nalla','நல்ல'], a:[], std:'நல்லது', eng:'Good / Nice', c:97 },
   { p:['romba','ரொம்ப'], a:[], std:'மிகவும்', eng:'Very / A lot', c:96 },
   { p:['correct','கரெக்ட்'], a:[], std:'சரியானது', eng:'Correct!', c:96 },
   { p:['kandippa','கண்டிப்பா'], a:[], std:'நிச்சயமாக', eng:'Definitely / For sure', c:95 },
-  // ACTIONS
   
 ];
 
