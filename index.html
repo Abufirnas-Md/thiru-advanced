@@ -640,7 +640,7 @@ function selectDialect(id, name, eng) {
 function setupRecognition() {
   const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
   if (!SR) {
-    document.getElementById('rec-status').textContent = '⚠️ Browser speech not supported. Use Chrome.';
+    document.getElementById('rec-status').textContent = '⚠️ Browser speech not supported. Use Chrome';
     return;
   }
   if (recognition) { try { recognition.abort(); } catch(e){} }
@@ -850,8 +850,6 @@ const TIRUNELVELI_MAP = [
   { p:['seekiram vaa makka','சீக்கிரம் வா மக்கா'], a:[], std:'விரைவாக வா', eng:'Come fast bro', c:94 },
   { p:['late aaguthu makka','லேட் ஆகுது மக்கா'], a:[], std:'தாமதமாகிறது', eng:'Getting late bro', c:94 }
 
-];
-
   // EXTENDED AUTHENTIC VARIANTS
   { p:['enna le makka'], a:[], std:'என்ன நண்பா?', eng:'What bro?', c:96 },
   { p:['saptiya makka'], a:[], std:'சாப்பிட்டாயா?', eng:'Had food bro?', c:96 },
@@ -901,43 +899,6 @@ const TIRUNELVELI_MAP = [
   { p:['adiye makka'], a:[], std:'ஏய் (பெண்)', eng:'Hey girl!', c:93 },
   { p:['seekiram vaa makka'], a:[], std:'விரைவாக வா', eng:'Come fast bro', c:94 },
   { p:['late aaguthu makka'], a:[], std:'தாமதமாகிறது', eng:'Getting late bro', c:94 }
-
-];
-  // PEOPLE
-  { p:['macha','machan','மாச்சான்'], a:[], std:'நண்பனே!', eng:'Buddy! Dear friend!', c:92 },
-  { p:['maama','மாமா'], a:[], std:'நண்பனே!', eng:'Dude! Bro!', c:91 },
-  { p:['thambi','தம்பி'], a:[], std:'இளைய சகோதரன்', eng:'Younger brother', c:95 },
-  { p:['anna','அண்ணா'], a:[], std:'மூத்த சகோதரன்', eng:'Elder brother / Sir!', c:95 },
-  { p:['akka','அக்கா'], a:[], std:'அக்கா', eng:'Elder sister / Ma\'am!', c:95 },
-  { p:['bro'], a:[], std:'சகோதரன்', eng:'Bro!', c:90 },
-  { p:['amma','அம்மா'], a:[], std:'அன்னையே!', eng:'Mother / Oh my!', c:99 },
-  { p:['thala','தலை'], a:[], std:'தலைவர்!', eng:'Leader / Boss!', c:93 },
-  // COMMANDS
-  { p:['vaa','வா'], a:[], std:'வாருங்கள்!', eng:'Come here!', c:91 },
-  { p:['po','போ'], a:[], std:'போகுங்கள்!', eng:'Go away!', c:90 },
-  { p:['ukkaru'], a:[], std:'உட்காருங்கள்', eng:'Sit down', c:90 },
-  { p:['nillu'], a:[], std:'நிற்கவும்', eng:'Stop!', c:89 },
-  { p:['kelu','கேளு'], a:[], std:'கேளுங்கள்', eng:'Listen!', c:90 },
-  { p:['sollu','சொல்லு'], a:[], std:'சொல்லுங்கள்', eng:'Tell / Say!', c:90 },
-  { p:['paaru','பாரு','paa','பா'], a:[], std:'பாருங்கள்!', eng:'Look / See this!', c:91 },
-  { p:['pannu','பண்ணு'], a:[], std:'செய்யுங்கள்', eng:'Do it!', c:90 },
-  // QUESTIONS
-  { p:['enna','என்ன'], a:['panra','பண்ற','pannu'], std:'நீ என்ன செய்கிறாய்?', eng:'What are you doing?', c:89 },
-  { p:['saptiya','சாப்பிட்டியா'], a:[], std:'சாப்பிட்டாயா?', eng:'Did you eat?', c:94 },
-  { p:['enga','எங்க'], a:[], std:'எங்கே?', eng:'Where?', c:95 },
-  { p:['evlo','எவ்வளவு'], a:[], std:'எவ்வளவு?', eng:'How much?', c:95 },
-  { p:['epdi','எப்படி'], a:[], std:'எப்படி?', eng:'How?', c:95 },
-  { p:['theriyuma','தெரியுமா'], a:[], std:'உங்களுக்கு தெரியுமா?', eng:'Do you know?', c:91 },
-  // AGREEMENT
-  { p:['seri','சரி'], a:[], std:'சரி, ஒப்புக்கொள்கிறேன்', eng:'Okay / Alright / Agreed', c:97 },
-  { p:['aama','ஆமா'], a:[], std:'ஆம், சரிதான்', eng:'Yes / That is right', c:98 },
-  { p:['illa','இல்ல'], a:[], std:'இல்லை', eng:'No / Not there', c:98 },
-  // QUALITY / DEGREE
-  { p:['nalla','நல்ல'], a:[], std:'நல்லது', eng:'Good / Nice', c:97 },
-  { p:['romba','ரொம்ப'], a:[], std:'மிகவும்', eng:'Very / A lot', c:96 },
-  { p:['correct','கரெக்ட்'], a:[], std:'சரியானது', eng:'Correct!', c:96 },
-  { p:['kandippa','கண்டிப்பா'], a:[], std:'நிச்சயமாக', eng:'Definitely / For sure', c:95 },
-  // ACTIONS
   { p:['velai','வேலை'], a:['pannu','பண்ணு'], std:'வேலை செய்யுங்கள்', eng:'Do your work!', c:92 },
   { p:['sapdu','சாப்டு'], a:[], std:'சாப்பிடு', eng:'Eat!', c:94 },
   { p:['kudi','குடி'], a:[], std:'குடி', eng:'Drink!', c:94 },
@@ -974,6 +935,42 @@ const TIRUNELVELI_MAP = [
   { p:['pannaadha','பண்ணாத'], a:[], std:'செய்யாதே!', eng:"Don't do it!", c:88 },
   { p:['level'], a:[], std:'நிலை', eng:'Level / Standard', c:85 },
   { p:['correct'], a:[], std:'சரியானது', eng:'Correct / Right', c:96 },
+  // PEOPLE
+  { p:['macha','machan','மாச்சான்'], a:[], std:'நண்பனே!', eng:'Buddy! Dear friend!', c:92 },
+  { p:['maama','மாமா'], a:[], std:'நண்பனே!', eng:'Dude! Bro!', c:91 },
+  { p:['thambi','தம்பி'], a:[], std:'இளைய சகோதரன்', eng:'Younger brother', c:95 },
+  { p:['anna','அண்ணா'], a:[], std:'மூத்த சகோதரன்', eng:'Elder brother / Sir!', c:95 },
+  { p:['akka','அக்கா'], a:[], std:'அக்கா', eng:'Elder sister / Ma\'am!', c:95 },
+  { p:['bro'], a:[], std:'சகோதரன்', eng:'Bro!', c:90 },
+  { p:['amma','அம்மா'], a:[], std:'அன்னையே!', eng:'Mother / Oh my!', c:99 },
+  { p:['thala','தலை'], a:[], std:'தலைவர்!', eng:'Leader / Boss!', c:93 },
+  // COMMANDS
+  { p:['vaa','வா'], a:[], std:'வாருங்கள்!', eng:'Come here!', c:91 },
+  { p:['po','போ'], a:[], std:'போகுங்கள்!', eng:'Go away!', c:90 },
+  { p:['ukkaru'], a:[], std:'உட்காருங்கள்', eng:'Sit down', c:90 },
+  { p:['nillu'], a:[], std:'நிற்கவும்', eng:'Stop!', c:89 },
+  { p:['kelu','கேளு'], a:[], std:'கேளுங்கள்', eng:'Listen!', c:90 },
+  { p:['sollu','சொல்லு'], a:[], std:'சொல்லுங்கள்', eng:'Tell / Say!', c:90 },
+  { p:['paaru','பாரு','paa','பா'], a:[], std:'பாருங்கள்!', eng:'Look / See this!', c:91 },
+  { p:['pannu','பண்ணு'], a:[], std:'செய்யுங்கள்', eng:'Do it!', c:90 },
+  // QUESTIONS
+  { p:['enna','என்ன'], a:['panra','பண்ற','pannu'], std:'நீ என்ன செய்கிறாய்?', eng:'What are you doing?', c:89 },
+  { p:['saptiya','சாப்பிட்டியா'], a:[], std:'சாப்பிட்டாயா?', eng:'Did you eat?', c:94 },
+  { p:['enga','எங்க'], a:[], std:'எங்கே?', eng:'Where?', c:95 },
+  { p:['evlo','எவ்வளவு'], a:[], std:'எவ்வளவு?', eng:'How much?', c:95 },
+  { p:['epdi','எப்படி'], a:[], std:'எப்படி?', eng:'How?', c:95 },
+  { p:['theriyuma','தெரியுமா'], a:[], std:'உங்களுக்கு தெரியுமா?', eng:'Do you know?', c:91 },
+  // AGREEMENT
+  { p:['seri','சரி'], a:[], std:'சரி, ஒப்புக்கொள்கிறேன்', eng:'Okay / Alright / Agreed', c:97 },
+  { p:['aama','ஆமா'], a:[], std:'ஆம், சரிதான்', eng:'Yes / That is right', c:98 },
+  { p:['illa','இல்ல'], a:[], std:'இல்லை', eng:'No / Not there', c:98 },
+  // QUALITY / DEGREE
+  { p:['nalla','நல்ல'], a:[], std:'நல்லது', eng:'Good / Nice', c:97 },
+  { p:['romba','ரொம்ப'], a:[], std:'மிகவும்', eng:'Very / A lot', c:96 },
+  { p:['correct','கரெக்ட்'], a:[], std:'சரியானது', eng:'Correct!', c:96 },
+  { p:['kandippa','கண்டிப்பா'], a:[], std:'நிச்சயமாக', eng:'Definitely / For sure', c:95 },
+  // ACTIONS
+  
 ];
 
 // ── DIALECT DETECTION ──
